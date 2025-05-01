@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Resmi Desa Telaga Kecil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: #00A6FD;
+      color: white;
+    }
+
+    nav {
+      background-color: #007ACC;
+      padding: 15px 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .desa-info {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    .desa-info strong {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    nav a.active::after,
+    nav a:hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .background-section {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      color: white;
+    }
+
+    .background-section img {
+      width: 1400px;
+      height: 450px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      text-shadow: 0px 0px 5px rgba(0,0,0,0.7); /* Supaya teks tetap jelas */
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .statistik {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+  background-color: #007ACC;
+  padding: 0; /* Hapus padding biar gambar bisa penuh */
+  border-radius: 10px;
+  overflow: hidden; /* Supaya gambar tidak keluar dari sudut rounded */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 250px; /* Atur tinggi sesuai kebutuhan */
+  object-fit: cover;
+  border-radius: 0; /* Tidak perlu bulat */
+  margin: 0; /* Hapus margin */
+  display: block; /* Hindari ada spasi putih di bawah gambar */
+}
+
+.card-content {
+  background-color: #007ACC;
+  padding: 1rem;
+}
+
+    .card h2 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .card p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #e0f7ff;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+  background-color: #007ACC;
+  color: white;
+  position: relative;
+  padding: 40px 20px 60px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 220px;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <img src="Logo_Desa_Telaga_Kecil-removebg-preview.png" alt="Logo Desa" class="logo">
+        <div class="desa-info">
+          <strong>Desa Telaga Kecil</strong><br>
+          <span>Kabupaten Kepulauan Anambas</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html" class="active">Home</a>
+        <a href="profil.html">Profil Desa</a>
+        <a href="infografis.html">Infografis</a>
+        <a href="listing.html">Listing</a>
+        <a href="berita.html">Berita</a>
+        <a href="belanja.html">Belanja</a>
+        <a href="ppid.html">PPID</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="background-section">
+    <!-- Gambar sebagai background -->
+    <img src="background 2 new.jpg" alt="Background Desa">
+    
+    <!-- Teks di atas gambar -->
+    <div class="hero-text">
+      <h1>Selamat Datang</h1>
+      <h2>Website Resmi Desa Telaga Kecil</h2>
+      <p>Sumber informasi terbaru tentang pemerintahan di Desa Telaga Kecil</p>
+    </div>
+  </section>  
+
+  <header style="padding: 40px 20px; background: #00A6FD; color: white;">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: auto; gap: 30px;">
+      
+      <!-- Foto Kepala Desa -->
+      <div style="flex: 0 0 200px; text-align: center;">
+        <img src="kepala desa (Arisman).jpg" alt="Foto Kepala Desa" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover;">
+      </div>
+      
+      <!-- Teks Sambutan -->
+      <div style="flex: 1; min-width: 250px;">
+        <h2 style="text-align: left; color: white; margin-top: 0;">Kata Sambutan dari Kepala Desa</h2>
+        <h3 style="text-align: left;margin: 0;">ARISMAN</h3>
+        <p style="text-align: left;margin: 5px 0 20px; font-weight: bold;">KEPALA DESA TELAGA KECIL</p>
+        <p style="text-align: left;text-align: justify;">
+          Selamat datang di Website resmi Pemerintah Desa Telaga Kecil, Kecamatan Siantan Selatan, Kabupaten Kepulauan Anambas. Website ini dibuat untuk mendukung penyebaran informasi dan membantu kelancaran program kerja pemerintah desa dalam melayani masyarakat.
+          Website ini dikembangkan sebagai bagian dari penelitian skripsi mahasiswa jurusan Sistem Informasi di salah satu Sekolah Tinggi Teknologi. Harapannya, website ini dapat memberikan manfaat bagi masyarakat dalam mengakses informasi desa dengan lebih mudah.
+          Terima kasih telah mengunjungi website kami. Kami terbuka untuk saran dan masukan demi kemajuan Desa Telaga Kecil ke depannya.
+        </p>
+      </div>
+  
+    </div>
+  </header>
+  
+  <main>
+    <section class="statistik">
+      <div class="card">
+        <img src="kepala desa (Arisman).jpg" alt="Foto Arisman">
+        <p></p>
+        <h2>ARISMAN</h2>
+        <p>Kepala Desa</p>
+      </div>
+      <div class="card">
+        <img src="Sekretaris Desa.jpg" alt="Foto Hairul Amri">
+        <p></p>
+        <h2>HAIRUL AMRI</h2>
+        <p>Sekretaris Desa</p>
+      </div>
+      <div class="card">
+        <img src="Kaur Keuangaan.jpg" alt="Foto Riski">
+        <p></p>
+        <h2>RISKI</h2>
+        <p>Kaur Keuangan</p>
+      </div>
+      <div class="card hidden">
+        <img src="Kaur Umum dan Tata Usaha.jpg" alt="Foto Ari Alifran">
+        <p></p>
+        <h2>ARI ALIFRAN</h2>
+        <p>Kaur Umum & Tata Usaha</p>
+      </div>
+      <div class="card hidden">
+        <img src="Kaur Perencanaan.jpg" alt="Foto Dicky Darmawan">
+        <p></p>
+        <h2>DICKY DARMAWAN</h2>
+        <p>Kaur Perencanaan</p>
+      </div>
+      <div class="card hidden">
+        <img src="Kasi Pelayanan.jpg" alt="Foto Sukardi">
+        <p></p>
+        <h2>SUKARDI</h2>
+        <p>Kasi Pelayanan</p>
+      </div>
+      <div class="card hidden">
+        <img src="Kasi Kesejahteraan.jpg" alt="Foto Budi Gunawan">
+        <p></p>
+        <h2>BUDI GUNAWAN</h2>
+        <p>Kasi Kesejahteraan</p>
+      </div>
+      <div class="card hidden">
+        <img src="Kasi Pemeerintahaan.jpg" alt="Foto Mellyana">
+        <p></p>
+        <h2>MELLYANA</h2>
+        <p>Kasi Pemerintahan</p>
+      </div>
+      <div class="card hidden">
+        <img src="Kepala Dusun I Sudirman.jpg" alt="Foto Sudirman">
+        <p></p>
+        <h2>SUDIRMAN</h2>
+        <p>Kepala Dusun I</p>
+      </div>
+      <div class="card hidden">
+        <img src="Kepala Dusun II.jpg" alt="Foto M Nazir">
+        <p></p>
+        <h2>M NAZIR</h2>
+        <p>Kepala Dusun II</p>
+      </div>
+    </section>
+    <!-- Tambahkan ini untuk tombol "Load More" -->
+<button id="loadMore" style="display:block; margin: 20px auto; padding: 10px 20px; background-color: #007ACC; color: white; border: none; cursor: pointer; border-radius: 5px;">Tampilkan Lebih Banyak</button>
+  </main>
+
+  <footer>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 5mm; max-width: 1200px; margin: auto;">
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <img src="Logo_Desa_Telaga_Kecil-removebg-preview.png" alt="Logo Desa" style="width: 120px; height: auto;">
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Pemerintah Desa Telaga Kecil</h3>
+        <p style="text-align: justify;">JL. Teluk Genting Dusun II Rt.03/Rw.02 Desa Telaga Kecil Kecamatan Siantan Selatan Kabupaten Kepulauan Anambas</p>
+        <p style="text-align: justify;">Desa Telaga Kecil, Kecamatan Siantan Selatan Kepulauan Anambas Provinsi Kepulauan Riau, 29791</p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Hubungi Kami</h3>
+        <p>📞 08xxxxxxxxxx</p>
+        <p>✉️ telagakecil123@gmail.com</p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Nomor Telepon Penting</h3>
+        <p><a href="tel:0813-7469-1226" style="color: white;">IGD RSUD TAREMPA</a></p>
+        <p><a href="tel:0812-6671-4571" style="color: white;">IGD RSUD PALMATAK</a></p>
+        <p><a href="tel:0822-8330-9394" style="color: white;">POS SAR ANAMBAS</a></p>
+        <p><a href="tel:0852-7208-7100" style="color: white;">DAMKAR & PENYELAMATAN</a></p>
+        <p><a href="tel:0812-7144-7812" style="color: white;">BPDB KEPULAUAN ANAMBAS 1</a></p>
+        <p><a href="tel:0822-6164-4643" style="color: white;">BPDB KEPULAUAN ANAMBAS 2</a></p>
+        <p><a href="tel:0821-7038-2462" style="color: white;">BPDB KEPULAUAN ANAMBAS 3</a></p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Jelajahi</h3>
+        <p><a href="#" style="color: white;">Website Kemendesa</a></p>
+        <p><a href="#" style="color: white;">Website Kemendagri</a></p>
+        <p><a href="#" style="color: white;">Cek DPT Online</a></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+const loadMoreBtn = document.getElementById('loadMore');
+
+loadMoreBtn.addEventListener('click', () => {
+  const cards = document.querySelectorAll('.card');
+  const isExpanded = loadMoreBtn.getAttribute('data-expanded') === 'true';
+
+  if (!isExpanded) {
+    // Kalau mau tampilkan semua
+    cards.forEach(card => card.classList.remove('hidden'));
+    loadMoreBtn.textContent = 'Tampilkan Lebih Sedikit';
+    loadMoreBtn.setAttribute('data-expanded', 'true');
+  } else {
+    // Kalau mau tampilkan hanya 4
+    cards.forEach((card, index) => {
+      if (index >= 3) {
+        card.classList.add('hidden');
+      }
+    });
+    loadMoreBtn.textContent = 'Tampilkan Lebih Banyak';
+    loadMoreBtn.setAttribute('data-expanded', 'false');
+  }
+});
+  </script>  
+</body>
+</html>

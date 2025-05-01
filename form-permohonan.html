@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permohonan Informasi | Desa Telaga Kecil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: #00A6FD;
+      color: white;
+    }
+
+    nav {
+      background-color: #007ACC;
+      padding: 15px 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .desa-info {
+      font-size: 14px;
+      color: white;
+      line-height: 1.3;
+    }
+
+    .desa-info strong {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    nav a.active::after,
+    nav a:hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+    }
+
+    .form-container {
+      max-width: 1000px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      color: black;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #007ACC;
+      margin-bottom: 10px;
+    }
+
+    .form-container p {
+      text-align: center;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f3f6f9;
+    }
+
+    textarea {
+      resize: vertical;
+      grid-column: 1 / -1;
+      min-height: 120px;
+    }
+
+    .submit-button {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .submit-button button {
+      background-color: #007ACC;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-button button:hover {
+      background-color: #005fa3;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .submit-button {
+        justify-content: center;
+      }
+    }
+
+    footer {
+      background-color: #007ACC;
+      color: white;
+      position: relative;
+      padding: 40px 20px 60px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+      min-width: 220px;
+    }
+
+    .footer-column h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      font-size: 14px;
+      color: white;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <img src="Logo_Desa_Telaga_Kecil-removebg-preview.png" alt="Logo Desa" class="logo">
+        <div class="desa-info">
+          <strong>Desa Telaga Kecil</strong><br>
+          <span>Kabupaten Kepulauan Anambas</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="profil.html">Profil Desa</a>
+        <a href="infografis.html">Infografis</a>
+        <a href="listing.html">Listing</a>
+        <a href="berita.html">Berita</a>
+        <a href="belanja.html">Belanja</a>
+        <a href="ppid.html" class="active">PPID</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="form-container">
+    <h2>FORM PERMOHONAN INFORMASI</h2>
+    <p>Harap mengisi form untuk permohonan informasi</p>
+
+    <form action="#" method="post">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="nama">Nama *</label>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required />
+        </div>
+
+        <div class="form-group">
+          <label for="instansi">Asal Instansi *</label>
+          <input type="text" id="instansi" name="instansi" placeholder="Masukkan asal instansi Anda" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telepon">Nomor Telepon *</label>
+          <input type="tel" id="telepon" name="telepon" placeholder="Masukkan nomor telepon Anda" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Alamat E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="Masukkan alamat email" required />
+        </div>
+
+        <div class="form-group" style="grid-column: 1 / -1;">
+          <label for="permohonan">Permohonan *</label>
+          <textarea id="permohonan" name="permohonan" placeholder="Masukkan permohonan Anda" required></textarea>
+        </div>
+      </div>
+
+      <div class="submit-button">
+        <button type="submit">Kirim</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 5mm; max-width: 1200px; margin: auto;">
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <img src="Logo_Desa_Telaga_Kecil-removebg-preview.png" alt="Logo Desa" style="width: 120px; height: auto;">
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Pemerintah Desa Telaga Kecil</h3>
+        <p style="text-align: justify;">JL. Teluk Genting Dusun II Rt.03/Rw.02 Desa Telaga Kecil Kecamatan Siantan Selatan Kabupaten Kepulauan Anambas</p>
+        <p style="text-align: justify;">Desa Telaga Kecil, Kecamatan Siantan Selatan Kepulauan Anambas Provinsi Kepulauan Riau, 29791</p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Hubungi Kami</h3>
+        <p>📞 08xxxxxxxxxx</p>
+        <p>✉️ telagakecil123@gmail.com</p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Nomor Telepon Penting</h3>
+        <p><a href="tel:0813-7469-1226" style="color: white;">IGD RSUD TAREMPA</a></p>
+        <p><a href="tel:0812-6671-4571" style="color: white;">IGD RSUD PALMATAK</a></p>
+        <p><a href="tel:0822-8330-9394" style="color: white;">POS SAR ANAMBAS</a></p>
+        <p><a href="tel:0852-7208-7100" style="color: white;">DAMKAR & PENYELAMATAN</a></p>
+        <p><a href="tel:0812-7144-7812" style="color: white;">BPDB KEPULAUAN ANAMBAS 1</a></p>
+        <p><a href="tel:0822-6164-4643" style="color: white;">BPDB KEPULAUAN ANAMBAS 2</a></p>
+        <p><a href="tel:0821-7038-2462" style="color: white;">BPDB KEPULAUAN ANAMBAS 3</a></p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Jelajahi</h3>
+        <p><a href="#" style="color: white;">Website Kemendesa</a></p>
+        <p><a href="#" style="color: white;">Website Kemendagri</a></p>
+        <p><a href="#" style="color: white;">Cek DPT Online</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

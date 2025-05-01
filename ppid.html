@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPID | Website Resmi Desa Telaga Kecil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: #00A6FD;
+      color: white;
+    }
+
+    nav {
+  background-color: #007ACC;
+  padding: 15px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.desa-info {
+  font-size: 14px;
+  color: white;
+  line-height: 1.3;
+}
+
+.desa-info strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: relative;
+}
+
+nav a.active::after,
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+    .content {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .content h1 {
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    footer {
+  background-color: #007ACC;
+  color: white;
+  position: relative;
+  padding: 40px 20px 60px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 220px;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.toggle-button {
+    background-color: white;
+    color: #007ACC; /* Warna hijau untuk teks */
+    border: 2px solid #007ACC; /* Border hijau */
+    border-radius: 8px; /* Membulat */
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .toggle-button:hover {
+    background-color: #007ACC;
+    color: white;
+  }
+
+  main {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .statistik {
+  display: flex; /* Ganti dari grid ke flex */
+  justify-content: center; /* Supaya card di tengah */
+  align-items: center; /* Tengah vertikal (opsional) */
+  flex-wrap: wrap; /* Biar responsif kalau banyak card */
+  gap: 1.5rem; /* Jarak antar card */
+  margin-top: 20px;
+}
+
+    .card {
+  background-color: #007ACC;
+  padding: 0;
+  border-radius: 10px;
+  width: 750px;
+  height: 130px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.card-content {
+  background-color: #007ACC;
+  padding: 1rem;
+}
+
+    .card h2 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .card p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #e0f7ff;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <img src="Logo_Desa_Telaga_Kecil-removebg-preview.png" alt="Logo Desa" class="logo">
+        <div class="desa-info">
+          <strong>Desa Telaga Kecil</strong><br>
+          <span>Kabupaten Kepulauan Anambas</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="profil.html">Profil Desa</a>
+        <a href="infografis.html">Infografis</a>
+        <a href="listing.html">Listing</a>
+        <a href="berita.html">Berita</a>
+        <a href="belanja.html">Belanja</a>
+        <a href="ppid.html" class="active">PPID</a>
+      </div>
+    </div>
+  </nav>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; background-color: #00A6FD; padding: 40px;">
+  
+    <!-- Teks Sambutan -->
+    <div style="flex: 1; min-width: 300px; margin-right: 40px;">
+      <h1 style="font-size: 2rem; color: white; margin-top: 0;">PPID</h1>
+      <p style="color: white; text-align: justify; font-size: 1rem;">
+        Pejabat Pengelola Informasi dan Dokumentasi (PPID) adalah pejabat yang bertanggung jawab di bidang penyimpanan, pendokumentasian, penyediaan, dan/atau pelayanan informasi di badan publik.
+      </p>
+      <button class="toggle-button">Tampilkan Lebih Banyak</button>
+    </div>
+  </div>  
+
+  <div style="display: flex; align-items: center; justify-content: space-between; background-color: #00A6FD; padding: 40px;">
+  
+    <!-- Teks Sambutan -->
+    <div style="flex: 1; min-width: 300px; margin-right: 40px;">
+      <h1 style="font-size: 2rem; color: white; margin-top: 0;">Informasi Publik Terbaru</h1>
+      <main>
+        <section class="statistik">
+    <div class="card">
+      <h1 style="font-size: 2rem; color: white; margin-top: 0;">Ingin mengajukan permohonan informasi?</h1>
+        <a href="form-permohonan.html">
+          <button class="toggle-button">Ajukan Permohonan Informasi</button>
+        </a>
+    </div>
+        </section>
+      </main>
+    </div>
+  </div> 
+
+  <footer>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 5mm; max-width: 1200px; margin: auto;">
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <img src="Logo_Desa_Telaga_Kecil-removebg-preview.png" alt="Logo Desa" style="width: 120px; height: auto;">
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Pemerintah Desa Telaga Kecil</h3>
+        <p style="text-align: justify;">JL. Teluk Genting Dusun II Rt.03/Rw.02 Desa Telaga Kecil Kecamatan Siantan Selatan Kabupaten Kepulauan Anambas</p>
+        <p style="text-align: justify;">Desa Telaga Kecil, Kecamatan Siantan Selatan Kepulauan Anambas Provinsi Kepulauan Riau, 29791</p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Hubungi Kami</h3>
+        <p>📞 08xxxxxxxxxx</p>
+        <p>✉️ telagakecil123@gmail.com</p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Nomor Telepon Penting</h3>
+        <p><a href="tel:0813-7469-1226" style="color: white;">IGD RSUD TAREMPA</a></p>
+        <p><a href="tel:0812-6671-4571" style="color: white;">IGD RSUD PALMATAK</a></p>
+        <p><a href="tel:0822-8330-9394" style="color: white;">POS SAR ANAMBAS</a></p>
+        <p><a href="tel:0852-7208-7100" style="color: white;">DAMKAR & PENYELAMATAN</a></p>
+        <p><a href="tel:0812-7144-7812" style="color: white;">BPDB KEPULAUAN ANAMBAS 1</a></p>
+        <p><a href="tel:0822-6164-4643" style="color: white;">BPDB KEPULAUAN ANAMBAS 2</a></p>
+        <p><a href="tel:0821-7038-2462" style="color: white;">BPDB KEPULAUAN ANAMBAS 3</a></p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Jelajahi</h3>
+        <p><a href="#" style="color: white;">Website Kemendesa</a></p>
+        <p><a href="#" style="color: white;">Website Kemendagri</a></p>
+        <p><a href="#" style="color: white;">Cek DPT Online</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
