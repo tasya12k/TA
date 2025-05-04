@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wisata | Website Resmi Desa Payalaman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: #00A6FD;
+      color: white;
+    }
+
+    nav {
+  background-color: #007ACC;
+  padding: 15px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.desa-info {
+  font-size: 14px;
+  color: white;
+  line-height: 1.3;
+}
+
+.desa-info strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: relative;
+}
+
+nav a.active::after,
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.content h1 {
+  margin-bottom: 20px;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-item {
+  background: #007ACC;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.news-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.news-item h2 {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.news-item .news-content {
+  display: none;
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 0.9em;
+  color: white;
+}
+
+.toggle-button {
+  margin-top: 10px;
+  background-color: white;
+  color: #007ACC;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.toggle-button:hover {
+  background-color: #005f99;
+}
+
+    footer {
+  background-color: #007ACC;
+  color: white;
+  position: relative;
+  padding: 40px 20px 60px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 220px;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <img src="Logo Desa Telaga Kecil.jpg" alt="Logo Desa" class="logo">
+        <div class="desa-info">
+          <strong>Desa Telaga Kecil</strong><br>
+          <span>Kabupaten Kepulauan Anambas</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="profil.html">Profil Desa</a>
+        <a href="infografis.html">Infografis</a>
+        <a href="listing.html">Listing</a>
+        <a href="berita.html">Berita</a>
+        <a href="belanja.html">Belanja</a>
+        <a href="wisata.html" class="active">Wisata</a>
+        <a href="ppid.html">PPID</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1>Wisata Desa Telaga Kecil</h1>
+    <div class="news-list">
+      <div class="news-item">
+        <img src="PANTAI PULAU LIMA SAAT SORE (NEW).jpg">
+        <h2>Pantai Pulau Lima</h2>
+        <div class="news-content">
+        <p>Pantai Pulau Lima: Permata Tersembunyi di Utara Telaga Kecil
+          Terletak hanya 100 meter dari Desa Telaga Kecil dan dipisahkan oleh selat kecil, Pulau Lima menawarkan keindahan alam yang masih alami. Di pulau ini, terdapat lapangan sepak bola yang menjadi tempat bermain favorit warga setiap sore hari, menciptakan suasana hangat dan penuh kebersamaan.</p>
+        <p>Tak hanya untuk warga lokal, Pulau Lima juga menjadi daya tarik wisata yang kian populer di kalangan turis dari berbagai negara. Dengan pesona pantai yang memesona di siang hari dan panorama matahari terbenam yang memukau di sore hari, Pulau Lima siap membuat siapa pun jatuh cinta pada pandangan pertama.</p>
+        </div>
+      <button class="toggle-button">Tampilkan Lebih Banyak</button>
+     </div>
+      <div class="news-item">
+        <img src="PANTAI PULAU PASU (NEW) .jpg">
+        <h2>Pantai Pulau Pasu</h2>
+        <div class="news-content">
+        <p>Pantai Pulau Pasu merupakan salah satu destinasi wisata andalan bagi masyarakat Desa Telaga Kecil. Pantai yang indah dan bersih ini kerap menjadi tempat bertelur bagi penyu, serta menjadi lokasi favorit untuk berkemah bagi para remaja setempat.
+          Selain itu, tidak jarang wisatawan dari berbagai negara datang untuk snorkeling dan menikmati keindahan pantai serta terumbu karang yang masih alami.</p>
+        </div>
+        <button class="toggle-button">Tampilkan Lebih Banyak</button>
+      </div>
+      <div class="news-item">
+        <img src="GOA PULAU PASU (NEW).jpg">
+        <h2>Goa Pulau Pasu</h2>
+        <div class="news-content">
+        <p>Goa Pulau Pasu merupakan salah satu daya tarik wisata bagi warga setempat maupun turis mancanegara. Goa ini memiliki nilai sejarah, karena pernah digunakan sebagai tempat persembunyian oleh masyarakat Vietnam saat masa perang saudara di masa lampau.</p>
+       </div>
+       <button class="toggle-button">Tampilkan Lebih Banyak</button>
+      </div>
+      <div class="news-item">
+          <img src="FASILITAS POSYANDU (NEW).jpg">
+          <h2>Gedung Posyandu</h2>
+          <div class="news-content">
+          <p>Gedung ini dibangun melalui dana desa dari APBDes Telaga Kecil tahun 2022. Pembangunan ini bertujuan untuk meningkatkan pelayanan kesehatan bagi masyarakat, khususnya ibu dan balita.</p>
+        </div>
+        <button class="toggle-button">Tampilkan Lebih Banyak</button>
+      </div>
+        <!-- Tambahkan berita lain sesuai kebutuhan -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 5mm; max-width: 1200px; margin: auto;">
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <img src="Logo_Desa_Telaga_Kecil-removebg-preview.png" alt="Logo Desa" style="width: 120px; height: auto;">
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Pemerintah Desa Telaga Kecil</h3>
+        <p style="text-align: justify;">JL. Teluk Genting Dusun II Rt.03/Rw.02 Desa Telaga Kecil Kecamatan Siantan Selatan Kabupaten Kepulauan Anambas</p>
+        <p style="text-align: justify;">Desa Telaga Kecil, Kecamatan Siantan Selatan Kepulauan Anambas Provinsi Kepulauan Riau, 29791</p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Hubungi Kami</h3>
+        <p>📞 08xxxxxxxxxx</p>
+        <p>✉️ telagakecil123@gmail.com</p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Nomor Telepon Penting</h3>
+        <p><a href="tel:0813-7469-1226" style="color: white;">IGD RSUD TAREMPA</a></p>
+        <p><a href="tel:0812-6671-4571" style="color: white;">IGD RSUD PALMATAK</a></p>
+        <p><a href="tel:0822-8330-9394" style="color: white;">POS SAR ANAMBAS</a></p>
+        <p><a href="tel:0852-7208-7100" style="color: white;">DAMKAR & PENYELAMATAN</a></p>
+        <p><a href="tel:0812-7144-7812" style="color: white;">BPDB KEPULAUAN ANAMBAS 1</a></p>
+        <p><a href="tel:0822-6164-4643" style="color: white;">BPDB KEPULAUAN ANAMBAS 2</a></p>
+        <p><a href="tel:0821-7038-2462" style="color: white;">BPDB KEPULAUAN ANAMBAS 3</a></p>
+      </div>
+    
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Jelajahi</h3>
+        <p><a href="#" style="color: white;">Website Kemendesa</a></p>
+        <p><a href="#" style="color: white;">Website Kemendagri</a></p>
+        <p><a href="#" style="color: white;">Cek DPT Online</a></p>
+      </div>
+    </div>
+  </footer> 
+  <script>
+    // Script tombol tampilkan/sembunyikan
+    const buttons = document.querySelectorAll('.toggle-button');
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.previousElementSibling; // cari div .news-content sebelum tombol
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+          button.textContent = 'Tampilkan Lebih Banyak';
+        } else {
+          content.style.display = 'block';
+          button.textContent = 'Tampilkan Lebih Sedikit';
+        }
+      });
+    });
+    </script>
+  
+</body>
+</html>
